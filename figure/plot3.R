@@ -9,7 +9,7 @@ datetime<- paste(as.Date(data1$Date), data1$Time)
 data1$Datetime<- as.POSIXct(datetime)
 ## Converts the data after pasting into POSIXct format
 with(data1,{
-  plot(Sub_metering_1~Datetime,
+  plot(Sub_metering_1~Datetime,type="l",
        ylab="Global Active Power (Kilowatt)", xlab="")
   lines(Sub_metering_2~Datetime, col="red")
   lines(Sub_metering_3~Datetime, col="blue")

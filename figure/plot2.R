@@ -9,7 +9,8 @@ datetime<- paste(as.Date(data1$Date), data1$Time)
 data1$Datetime<- as.POSIXct(datetime)
 ## Converts the data after pasting into POSIXct format
 with(data1,{
-  plot(Global_active_power~Datetime, ylab="Global Active Power (Kilowatt)", xlab="")
+  plot(Datetime,Global_active_power,type="l", ylab="Global Active Power (Kilowatt)", xlab="")
+  
 })
 ## Creates the plot as mentioned above
 dev.copy(png, file="plot2.png", height=480, width=480)
